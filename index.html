@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Banking System</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="register_div">
+      <label for="regemail"><h2>Register</h2></label>
+      <input id="regemail" type="email" name="regemail" placeholder="Email" />
+      <input
+        id="regusername"
+        type="username"
+        name="username"
+        placeholder="Username"
+        required
+      />
+      <input id="regbalance" type="number" placeholder="Account Balance" />
+      <input
+        id="regpassword"
+        type="password"
+        name="regpassword"
+        placeholder="Password"
+      />
+      <button onclick="registerUser()">Register</button>
+    </div>
+    <div id="login_div" onsubmit="">
+      <label for="logemail"><h2>Login</h2></label>
+      <input id="logemail" type="email" name="logemail" placeholder="Email" />
+      <input
+        id="logpassword"
+        type="password"
+        name="logpassword"
+        placeholder="Password"
+      />
+      <button onclick="loginUser()">Login</button>
+    </div>
+    <div id="userinfo">
+      <h1 id="usermessage"></h1>
+      <br>
+      <h2 id="balmessage"></h2>
+      <div id="logbtn">
+        <button onclick="logoutUser()">Logout</button>
+        <button id="transfer_option">Send Money</button>
+        <ul id="list"></ul>
+      </div>
+    </div>
+    <div class="money_transfer">
+      <div class="transfer_details">
+        <div class="close">+</div>
+        <input class="transfer_to_username" type="text" placeholder="Send Money To (Username)">
+        <input class="transfer_amount" type="number" min="0" placeholder="Amount To Send">
+        <button class="transfer_button">Send Money</button>
+      </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCLV5k4u5Q2G9b1W2yCUNwu4bG4uUed1hQ",
+        authDomain: "bank-system-9e491.firebaseapp.com",
+        databaseURL: "https://bank-system-9e491-default-rtdb.firebaseio.com",
+        projectId: "bank-system-9e491",
+        storageBucket: "bank-system-9e491.appspot.com",
+        messagingSenderId: "206775665988",
+        appId: "1:206775665988:web:39b41767e84005a9180311",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="./app.js"></script>
+  </body>
+</html>

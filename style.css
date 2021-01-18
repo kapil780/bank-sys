@@ -1,0 +1,114 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+input{
+    width: 500px;
+    height: 60px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-size: 25px;
+}
+
+input:focus{
+    background-color: lightgoldenrodyellow;
+}
+
+button{
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border: none;
+    background-color: #2dbe60;
+    color: whitesmoke;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#register_div{
+    width: 500px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#login_div{
+    width: 500px;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+#userinfo{
+    display: none;
+    flex-direction: column;
+}
+
+#list{
+    margin-top: 90px;
+    list-style: none;
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-gap: 30px;
+}
+/* #list li{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+} */
+.money_transfer{
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.transfer_details{
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   position: relative;
+}
+.transfer_details .close{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin: 5px;
+    background: rgba(247, 119, 0, 0.616);
+    font-size: 40px;
+    transform: rotate(45deg);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 1px;
+}
