@@ -19,7 +19,6 @@ firebase.auth().onAuthStateChanged((user) => {
 
 function logoutUser() {
     firebase.auth().signOut();
-    location.reload();
 }
 function loginUser() {
     let email = document.getElementById("logemail").value;
